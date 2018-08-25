@@ -1,0 +1,13 @@
+
+.text{
+    display: inline-block;
+    border-bottom:5px double gray;
+    margin-top: 30px;
+}
+.like{
+    float: right;
+}
+.article_content{
+    border-bottom:2px solid gray;
+    margin-bottom: 10px;
+}

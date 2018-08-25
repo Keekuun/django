@@ -1,0 +1,47 @@
+{% load staticfiles %}
+<!--旋转木马-->
+<div class="justify-content-center">
+  <div id="demo" class="carousel slide" data-ride="carousel" data-interval="5000">
+
+    <!-- 指示符 -->
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+
+    <!-- 轮播图片 -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../static/images/yangchunbaixue.jpg">
+        <div class="carousel-caption">
+          <h3>阳春白雪</h3>
+          <p>凌波飞燕，一怒为红颜！</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../static/images/liusha.jpg">
+        <div class="carousel-caption">
+          <h3>聚散流沙</h3>
+          <p>术以知奸，以刑止刑</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../static/images/luoshengtang.jpg">
+        <div class="carousel-caption">
+          <h3>罗生堂下</h3>
+          <p>灵衣玉佩，一阴一阳，罗生堂下，秋兰长生。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 左右切换按钮 -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+
+  </div>
+</div>

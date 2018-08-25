@@ -1,0 +1,427 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<!--width=device-width 表示宽度是设备屏幕的宽度。-->
+	<!--initial-scale=1 表示初始的缩放比例。-->
+	<!--shrink-to-fit=no 自动适应手机屏幕的宽度。-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!--IE兼容模式-->
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>月上秦少@blog</title>
+	<!-- Bootstrap 核心 CSS 文件 -->
+	<link href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet">
+	<!--Font Awesome是一个方便的图标库-->
+	<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+  <!--自定义的css-->
+	<link rel="stylesheet" href="{% static 'css/base.css' %}">
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+	<script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	<!--自定义的js-->
+	<script src="{% static 'js/main.js' %}"></script>
+</head>
+<body>
+
+<!--外层最大容器-->
+<div class="container  justfy-content-between" id="main">
+	<!--第一行：头部信息-->
+	<div class="row" id="header">
+		<!--标题栏-->
+		<div class="blog_title">
+			<h2 class="blog_name">月上秦少@blog</h2>
+			<p class="blog_desc">每一个不曾起舞的日子，都是对生命的浪费！</p>
+		</div>
+
+
+		<!--导航栏-->
+		<div class="container mynav">
+			<nav class="navbar navbar-fixed-top navbar-expand-md navbar-light">
+				<a href="#" class="navbar-brand">
+					<img class="mybrand" src="../static/images/brand.jpg">
+				</a>
+				<button class="navbar-toggler" data-toggle="collapse" data-target="#top_navbar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="top_navbar">
+					<ul class="navbar-nav">
+						<li class="nav-item"><a href="./main_bak.html" class="nav-link my_nav_link active">主页</a></li>
+						<li class="nav-item"><a href="article.html" class="nav-link my_nav_link">文章</a></li>
+						<li class="nav-item"><a href="community.html" class="nav-link my_nav_link">社区</a></li>
+						<li class="nav-item"><a href="manage.html" class="nav-link my_nav_link">管理</a></li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Dropdown</a>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">Link 1</a>
+								<a class="dropdown-item" href="#">Link 2</a>
+								<a class="dropdown-item" href="#">Link 3</a></div>
+						</li>
+					</ul>
+				</div>
+				<form class="form-inline nav_form">
+					<input class="form-control" type="text" placeholder="Search">
+					<button class="btn btn-warning" type="button">Search</button>
+				</form>
+			</nav>
+		</div>
+	</div>
+	<!--第二行：主要内容-->
+	<div class="row" id="middle">
+
+		<!--第一列：中间左边-->
+		<div class="col-7" id="middle-left">
+			<!--旋转木马-->
+			<div class="justify-content-center">
+				<div id="demo" class="carousel slide" data-ride="carousel" data-interval="5000">
+
+					<!-- 指示符 -->
+					<ul class="carousel-indicators">
+						<li data-target="#demo" data-slide-to="0" class="active"></li>
+						<li data-target="#demo" data-slide-to="1"></li>
+						<li data-target="#demo" data-slide-to="2"></li>
+					</ul>
+
+					<!-- 轮播图片 -->
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="../static/images/yangchunbaixue.jpg">
+							<div class="carousel-caption">
+								<h3>阳春白雪</h3>
+								<p>凌波飞燕，一怒为红颜！</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="../static/images/liusha.jpg">
+							<div class="carousel-caption">
+								<h3>聚散流沙</h3>
+								<p>术以知奸，以刑止刑</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="../static/images/luoshengtang.jpg">
+							<div class="carousel-caption">
+								<h3>罗生堂下</h3>
+								<p>灵衣玉佩，一阴一阳，罗生堂下，秋兰长生。</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- 左右切换按钮 -->
+					<a class="carousel-control-prev" href="#demo" data-slide="prev">
+						<span class="carousel-control-prev-icon"></span>
+					</a>
+					<a class="carousel-control-next" href="#demo" data-slide="next">
+						<span class="carousel-control-next-icon"></span>
+					</a>
+
+				</div>
+			</div>
+
+			<!--文章概览汇总-->
+			<div class="container justify-content-center">
+				<hr class="hr_text"/>
+
+				<div class="text">
+					<div>
+						<a href="article.html"><h4>我于杀戮之中绽放，亦如黎明中的花朵！</h4></a>
+					</div>
+					<div>
+					<span class="author ">
+						<a href="#">作者</a>
+					</span>
+						<span class="pubtime">
+						<a href="#">2018-8-10</a>
+					</span>
+					</div>
+					<p class="introduction">一重山，两重山。山远天高烟水寒，相思枫叶丹。菊花开，菊花残。塞雁高飞人未还，一帘风月闲。
+						一重山，两重山。山远天高烟水寒，相思枫叶丹。菊花开，菊花残。塞雁高飞人未还，一帘风月闲......</p>
+				</div>
+				<hr class="hr_desc"/>
+
+				<div class="text">
+					<div>
+						<a href="article.html"><h4>我于杀戮之中绽放，亦如黎明中的花朵！</h4></a>
+					</div>
+					<div>
+					<span class="author ">
+						<a href="#">作者</a>
+					</span>
+						<span class="pubtime">
+						<a href="#">2018-8-10</a>
+					</span>
+					</div>
+					<p class="introduction">一重山，两重山。山远天高烟水寒，相思枫叶丹。菊花开，菊花残。塞雁高飞人未还，一帘风月闲。
+						一重山，两重山。山远天高烟水寒，相思枫叶丹。菊花开，菊花残。塞雁高飞人未还，一帘风月闲......</p>
+				</div>
+				<hr class="hr_desc"/>
+
+				<div class="text">
+					<div>
+						<a href="article.html"><h4>我于杀戮之中绽放，亦如黎明中的花朵！</h4></a>
+					</div>
+					<div>
+					<span class="author ">
+						<a href="#">作者</a>
+					</span>
+						<span class="pubtime">
+						<a href="#">2018-8-10</a>
+					</span>
+					</div>
+					<p class="introduction">一重山，两重山。山远天高烟水寒，相思枫叶丹。菊花开，菊花残。塞雁高飞人未还，一帘风月闲。
+						一重山，两重山。山远天高烟水寒，相思枫叶丹。菊花开，菊花残。塞雁高飞人未还，一帘风月闲......</p>
+				</div>
+				<hr class="hr_desc"/>
+
+			</div>
+
+			<!--分页器-->
+			<div class="row justify-content-center">
+				<ul class="pagination pagination-md justify-content-center">
+					<li class="page-item disabled">
+						<a href="#" class="page-link"><<</a>
+					</li>
+					<li class="page-item active">
+						<a href="#" class="page-link">1</a>
+					</li>
+					<li class="page-item">
+						<a href="#" class="page-link">2</a>
+					</li>
+					<li class="page-item">
+						<a href="#" class="page-link">3</a>
+					</li>
+					<li class="page-item">
+						<a href="#" class="page-link">4</a>
+					</li>
+					<li class="page-item">
+						<a href="#" class="page-link">>></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--第二列：中间右边-->
+		<div class="col-4" id="middle-right">
+			<div class="container">
+				<h5 class="callme">关注我</h5>
+				<div class="row tome">
+					<ul>
+						<li><a href="" class="sina">新浪微博</a></li>
+						<li><a href="" class="tenx">腾讯微博</a></li>
+						<li><a href="" class="rss">RSS</a></li>
+						<li><a href="" class="email">邮箱</a></li>
+					</ul>
+				</div>
+			</div>
+			<!--排行-->
+			<div class="row ">
+				<div class="container">
+					<!-- Nav pills -->
+					<ul class="nav nav-pills rank_ul" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active rank_nav" data-toggle="pill" href="#view">浏览排行</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link rank_nav" data-toggle="pill" href="#comt">评论排行</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link rank_nav" data-toggle="pill" href="#reco">站长推荐</a>
+						</li>
+					</ul>
+
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<div id="view" class="container tab-pane active"><br>
+							<ul>
+								<li class="rank_li">
+									<span class="badge badge-danger rank">1</span>
+									<span class="rank_title"><a href="">永远都不要放弃自己，勇往直前，直至成功！</a></span>
+								</li>
+								<li class="rank_li">
+									<span class="badge badge-warning rank">2</span>
+									<span class="rank_title"><a href="">萤火虫的光点虽然微弱，但亮着便是向黑暗挑战。</a></span>
+								</li>
+								<li class="rank_li">
+									<span class="badge badge-success rank">3</span>
+									<span class="rank_title"><a href="">上有天，下有地，中间站着你自己，做一天人，尽一天人事儿。</a></span>
+								</li>
+								<li class="rank_li">
+									<span class="badge badge-primary rank">4</span>
+									<span class="rank_title"><a href="">生命力的意义在于拼搏，因为世界本身就是一个竞技场。</a></span>
+								</li>
+								<li class="rank_li">
+									<span class="badge badge-info rank">5</span>
+									<span class="rank_title"><a href="">通过云端的道路，只亲吻攀登者的足迹。</a></span>
+								</li>
+								<li class="rank_li">
+									<span class="badge badge-secondary rank">6</span>
+									<span class="rank_title"><a href="">知识给人重量，成就给人光彩，大多数人只是看到了光彩，而不去称量重量。</a></span>
+								</li>
+							</ul>
+						</div>
+						<div id="comt" class="container tab-pane fade"><br>
+							<ul>
+								<li><span class="badge badge-danger rank">1</span><span></span>永远都不要放弃自己，勇往直前，直至成功！</li>
+								<li><span class="badge badge-warning rank">2</span>萤火虫的光点虽然微弱，但亮着便是向黑暗挑战。</li>
+								<li><span class="badge badge-success rank">3</span>上有天，下有地，中间站着你自己，做一天人，尽一天人事儿。</li>
+								<li><span class="badge badge-primary rank">4</span>生命力的意义在于拼搏，因为世界本身就是一个竞技场。</li>
+								<li><span class="badge badge-info rank">5</span>通过云端的道路，只亲吻攀登者的足迹。</li>
+								<li><span class="badge badge-secondary rank">6</span>知识给人重量，成就给人光彩，大多数人只是看到了光彩，而不去称量重量。</li>
+							</ul>
+						</div>
+						<div id="reco" class="container tab-pane fade"><br>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--标签云-->
+			<div class="row">
+				<div class="container">
+					<h5 class="cloud_title">标签云</h5>
+					<div>
+						<span class="cloud">
+							<button class="btn btn-danger ">
+								<span>CSS
+									<span class="badge badge-light badge-pill">666</span>
+								</span>
+							</button>
+						</span>
+						<span class="cloud">
+							<button class="btn btn-info ">
+								<span>HTML
+									<span class="badge badge-light badge-pill">666</span>
+								</span>
+							</button>
+						</span>
+						<span class="cloud">
+							<button class="btn btn-warning ">
+								<span>Javascript
+									<span class="badge badge-light badge-pill">666</span>
+								</span>
+							</button>
+						</span>
+						<span class="cloud">
+							<button class="btn btn-success ">
+								<span>Python
+									<span class="badge badge-light badge-pill">666</span>
+								</span>
+							</button>
+						</span>
+						<span class="cloud">
+							<button class="btn btn-secondary ">
+								<span>Mysql
+									<span class="badge badge-light badge-pill">666</span>
+								</span>
+							</button>
+						</span>
+						<span class="cloud">
+							<button class="btn btn-primary ">
+								<span>Django
+									<span class="badge badge-light badge-pill">666</span>
+								</span>
+							</button>
+						</span>
+						<span class="cloud">
+							<button class="btn btn-dark ">
+								<span>Mongodb
+									<span class="badge badge-light badge-pill">666</span>
+								</span>
+							</button>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<!--文章归档-->
+			<div class="row">
+				<div class="container">
+					<h5 class="wzgd">文章归档</h5>
+					<div class="row">
+						<div class="list-group wzgda">
+							<a href="#"
+								 class="list-group-item list-group-item-info d-flex justify-content-between align-items-center">
+								2018年6月份文章归档
+								<span class="badge badge-success badge-pill">666</span>
+							</a>
+							<a href="#"
+								 class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+								2018年6月份文章归档
+								<span class="badge badge-success badge-pill">666</span>
+							</a>
+							<a href="#"
+								 class="list-group-item list-group-item-secondary d-flex justify-content-between align-items-center">
+								2018年6月份文章归档
+								<span class="badge badge-success badge-pill">666</span>
+							</a>
+							<a href="#"
+								 class="list-group-item list-group-item-warning d-flex justify-content-between align-items-center">
+								2018年6月份文章归档
+								<span class="badge badge-success badge-pill">666</span>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!--友情链接-->
+				<div class="row">
+					<div class="container">
+						<h5 class="good_link">友情链接</h5>
+						<div class="container justify-content-center">
+							<nav>
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="">W3C</a></li>
+									<li class="breadcrumb-item"><a href="">菜鸟教程</a></li>
+									<li class="breadcrumb-item"><a href="">Github</a></li>
+									<li class="breadcrumb-item"><a href="">麦子学院</a></li>
+									<li class="breadcrumb-item"><a href="">牛客网</a></li>
+									<li class="breadcrumb-item"><a href="">博客园</a></li>
+								</ol>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--第三行：底部内容-->
+		<div class="row" id="footer">
+			<!--底部导航-->
+			<nav class="navbar navbar-fixed-top navbar-expand-md navbar-light bg-light">
+				<a href="#" class="navbar-brand">博客</a>
+				<button class="navbar-toggler" data-toggle="collapse" data-target="#right_narbar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="right_narbar">
+					<ul class="navbar-nav">
+						<li class="nav-item"><a href="#" class="nav-link">菜鸟教程</a></li>
+						<li class="nav-item"><a href="#" class="nav-link active">GitHub</a></li>
+						<li class="nav-item"><a href="#" class="nav-link">Python</a></li>
+						<li class="nav-item"><a href="#" class="nav-link">菜鸟教程</a></li>
+						<li class="nav-item"><a href="#" class="nav-link active">GitHub</a></li>
+						<li class="nav-item"><a href="#" class="nav-link">Python</a></li>
+						<li class="nav-item"><a href="#" class="nav-link">菜鸟教程</a></li>
+						<li class="nav-item"><a href="#" class="nav-link active">GitHub</a></li>
+						<li class="nav-item"><a href="#" class="nav-link">Python</a></li>
+						<li class="nav-item"><a href="#" class="nav-link">菜鸟教程</a></li>
+						<li class="nav-item"><a href="#" class="nav-link active">GitHub</a></li>
+						<li class="nav-item"><a href="#" class="nav-link">Python</a></li>
+					</ul>
+				</div>
+			</nav>
+
+		</div>
+	</div>
+</div>
+<!--返回顶部-->
+<!--<div class="cl"></div>&lt;!&ndash;清除浮动&ndash;&gt;-->
+<div id="totop">
+	<a id="togbook" href="/"></a> <a onclick="topFunction()" id="gotop" href="javascript:void(0)"></a>
+</div>
+<!--<button onclick="topFunction()" id="myBtn" title="回顶部">返回顶部</button>-->
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+{% extends 'top_nav.html' %}
+{% load staticfiles %}
+{% block main_content %}
+    <script>
+      $(document).ready(function () {
+          $('#add_article').addClass('active');
+      });
+  </script>
+  <link rel="stylesheet" href="{% static 'css/add_article.css' %}">
+  <div class="text">
+    <br>
+    <form method="post" action="{% url 'add_article' %}">
+     {% csrf_token %}
+      {{ add_article_form.media }}
+      {{ add_article_form.as_p }}
+      <input type="submit" value="保存"/>
+    </form>
+  </div>
+
+{% endblock %}

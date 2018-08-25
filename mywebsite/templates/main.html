@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block middle-left %}
+  <script>
+      $(document).ready(function () {
+          $('#home').addClass('active');
+      });
+  </script>
+  <!--旋转木马-->
+  {% include 'carousel.html' %}
+
+  <!--文章概览汇总-->
+  <div class="container justify-content-center">
+    <h4 class="new_article">最新文章</h4>
+    {% for article in article_list %}
+      <div class="text">
+        <div>
+          <h4><a href="{% url 'article' %}?id={{ article.id }}">{{ article.title }}</a></h4>
+        </div>
+        <div>
+      <span class="author ">
+        <a href="#">{{ article.user }}</a>
+      </span>
+          <span class="pubtime">
+          {{ article.date_publish }}
+      </span>
+        </div>
+        <p class="introduction">{{ article.desc }}</p>
+      </div>
+    {% endfor %}
+
+  </div>
+  <!--分页器-->
+  <div class="row justify-content-center">
+    {% include 'paginator.html' %}
+  </div>
+{% endblock %}

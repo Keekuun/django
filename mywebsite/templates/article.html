@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block middle-left %}
+  <script>
+      $(document).ready(function () {
+          $('[data-toggle="tooltip"]').tooltip();
+      });
+  </script>
+
+
+  <link rel="stylesheet" href="{% static 'css/article.css' %}">
+  <div class="container">
+    <h4 class="text">{{ article.title|safe }}</h4>
+    <div class="author ">
+      <a href="#">{{ article.user|safe }}</a>
+
+      <span class="pubtime">
+          {{ article.date_publish }}
+      </span>
+    </div>
+    <div class="article_content">{{ article.content|safe }}</div>
+
+    <button class="btn btn-primary like"
+            data-toggle="tooltip"
+            title="赞一下~"
+            data-placement="left">
+      <i class="fa fa-thumbs-up"></i>
+      <span class="badge badge-secondary badge-pill">{{ article.click_like }}</span>
+    </button>
+
+    <button class="btn btn-primary unlike"
+            data-toggle="tooltip"
+            title="踩一下~"
+            data-placement="right">
+      <i class="fa fa-thumbs-down"></i>
+      <span class="badge badge-secondary badge-pill">{{ article.click_unlike }}</span>
+    </button>
+  </div>
+
+{% endblock %}

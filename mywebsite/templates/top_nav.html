@@ -1,0 +1,84 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <!--width=device-width 表示宽度是设备屏幕的宽度。-->
+  <!--initial-scale=1 表示初始的缩放比例。-->
+  <!--shrink-to-fit=no 自动适应手机屏幕的宽度。-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!--IE兼容模式-->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>月上秦少@blog</title>
+  <!-- Bootstrap 核心 CSS 文件 -->
+  <link href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet">
+  <!--Font Awesome是一个方便的图标库-->
+  <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+  <!--自定义的css-->
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+  <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+  <script src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <!--自定义的js-->
+  <script src="{% static 'js/main.js' %}"></script>
+</head>
+<body>
+
+<!--外层最大容器-->
+<div class="container  justfy-content-between" id="main">
+  <!--第一行：头部信息-->
+  <div class="row" id="header">
+    <!--标题栏-->
+    <div class="blog_title">
+      <h2 class="blog_name">月上秦少@blog</h2>
+      <p class="blog_desc">每一个不曾起舞的日子，都是对生命的浪费！</p>
+    </div>
+
+
+    <!--导航栏-->
+    <div class="container mynav">
+      <nav class="navbar navbar-fixed-top navbar-expand-md navbar-light">
+        <a href="#" class="navbar-brand">
+          <img class="mybrand" src="../static/images/brand.jpg" name="bolg">
+        </a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#top_navbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="top_navbar">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="{% url 'home' %}" class="nav-link my_nav_link" id="home">主页</a></li>
+            <li class="nav-item"><a href="{% url 'add_article' %}" class="nav-link my_nav_link" id="add_article">随笔</a></li>
+            <li class="nav-item"><a href="{% url 'community' %}" class="nav-link my_nav_link" id="community">社区</a></li>
+            <li class="nav-item"><a href="/admin/" class="nav-link my_nav_link" id="admin">管理</a></li>
+            <li class="nav-item dropdown">
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Dropdown</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Link 1</a>
+                <a class="dropdown-item" href="#">Link 2</a>
+                <a class="dropdown-item" href="#">Link 3</a></div>
+            </li>
+          </ul>
+        </div>
+        <form class="form-inline nav_form">
+          <input class="form-control" type="text" placeholder="Search">
+          <button class="btn btn-warning" type="button">Search</button>
+        </form>
+      </nav>
+    </div>
+  </div>
+  <!--第二行：主要内容-->
+  <div class="row" id="middle">
+    <div class="container">
+      {% block main_content %}
+
+      {% endblock %}
+    </div>
+  </div>
+</div>
+</body>
+</html>
